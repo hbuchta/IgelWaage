@@ -425,3 +425,106 @@ Beschreibung](./media/image37.png)
 
 ![Ein Bild, das Text enthält. Automatisch generierte
 Beschreibung](./media/image38.png)
+
+# Konfiguration der Waage
+
+## Waage im Konfigurationsmodus starten und verbinden
+
+Damit die fertig gebaute Waage auch funktioniert, sind noch einige Konfigurationseinstellungen erforderlich.
+Das wird die Waage im Konfigurationsmodus gestartet:
+
+1. Wenn die Waage ausgeschaltet (vom Strom getrennt) ist, so wird der Taster Config gedrückt und gedrückt gehalten. Die Waage wird eingeschaltet. Nach etwa 4 Sekunden kann der Taster Config losgelassen werden.
+2. Wenn die Waage bereits läuft (mit Strom verbunden), so wird der Taster Config gedrückt und gedrückt gehalten. Anschließend wird der Taster Reset für eine Sekunde gedrückt. Nach etwa 4 Sekunden kann der Taster Config nun losgelassen werden.
+
+Die Waage sollte sich anschließend im Konfigurationszustand befinden. In diesem Zustand führt die Waage keine Wiegungen aus, sondern startet einen WLAN-Hotspot, mit dem man sich nun verbinden muss.
+
+Der Hotspot sollte unter dem Namen WifiScale-xxxxx (xxxxx=Chip-ID des verbauten ESP 8266) sichtbar sein. Das Passtwort lautet "hedgehog" (ohne die Anführungszeichen).
+
+Mit einem Rechner, Tablet oder Smartphone verbindet man sich nun mit diesem WLAN. Achtung: Das betreffende Gerät verfügt über einen keinen Internetzugang, solange die Verbindung mit der Waage hergestellt ist.
+
+Auf dem Gerät öffnet man nun einen Browser und in dem Browser die Webseite `http://192.168.1.4`. Es kann auch eine andere Adresse angegeben werden. Eigentlich sollte eine beliebe Webseite zur Konfiguration führen, aber die IP-Adresse funkioniert am sichersten.
+
+Die Waage zeigt dann ihr Hauptmenü an:
+
+<img src="./media/config1.PNG"  width="500">
+
+Beim ersten Start wird die Waage anstellt der grünen OKs rote TODOs anzeigen.
+Man kann nun von oben nach unten die Punkte durchgehen und die betreffenden Einstellungen durch Klicken auf `ändern` vornehmen.
+
+
+## WiFi Konfiguration
+
+In ersten Schritt wird die WLAN-Konfiguration hergestellt. Erforderlich ist die SSIS des WLAN-Routers und das Passwort, sowie ein Zeitserver. Dieser kann auf dem WLAN-Router selbst bereitgestellt werden (siehe oben) oder aus dem Internet bezogen werden (Adresse z.B. 0.de.pool.ntp.org). Entsprechende Server lassen sich über eine Suchmaschine finden. Bei mir ist die Adresse fritz.box, da der Zeitserver über die Fritzbox selbst bereitgestellt wird.
+
+<img src="./media/config2.PNG"  width="340">
+
+## FTP-Server Konfiguration
+
+Damit die Waage die Messdaten im Netzwerk speichern kann, ist ein Zugriff auf einen FTP-Server erforderlich. Dieser muss den passiven Modus unterstützen. Die entsprechenden Daten des FTP-Servers (Server, Port, User, Passwort) können in der folgenden Maske eingestellt werden. Außerdem wird ein Verzeichnis angegeben, in das die Waage schreiben soll.
+
+<img src="./media/config3.PNG"  width="340">
+
+## Kalibrierung der Waage
+
+Um die Waage zu kalibrieren, sind 2 bekannte Gewichte erforderlich. Außerdem benötigt man eine Platte, um die Gewichte auf die Waage stellen zu können. Die Waage führt durch die Konfiguration:
+
+<img src="./media/config5.PNG"  width="340">
+
+Die erste Messung erfolgt ohne Gewicht (auch ohne die Platte) und gibt die absolute Nullstellung der Wiegezellen an. Wenn die Waage frei von Gewichten ist, drückt man auf Weiter und die Messung wird durchgeführt.
+Anschließend wird die Platte aufgelegt und ein Gewicht auf die Platte gelegt. In das Eingabefeld wird nun das Gesamtgewicht (Platte und aufgelegtes Gewicht) eingegeben.
+
+<img src="./media/config6.PNG"  width="340">
+
+Anschließend drückt man auf Weiter. Dieser Vorgang wird noch mal mit einem weiteren Gewicht wiederholt.
+Im letzten Schritt zeigt die Waage das Ergebnis der Kalibrierung an.
+Wenn keine Unstimmigkeiten erkannt werden, kann das Ergebnis übernommen werden. Andernfalls muss die Kalibrierung wiederholt werden.
+
+## Optionen
+
+Die letzten Einstellungen beziehen sich auf die Optionen. Jede einzelne Option ist in der Spalte Beschreibung erläutert. Die Voreinstellungen können ein erster Anhalt sein.
+
+<img src="./media/config4.PNG"  width="340">
+
+
+# Protokolldatei
+
+Die Ergebnisse werden in Tagesdateien geschrieben. Während des Tages hängt die Waage neue Wiegungen an die Datei an. Die Dateien haben das Muster datalog-jjjj-mm-tt.csv.
+
+Beispiel einer Protokolldatei:
+```
+2022-10-12 00:34:35,866,9665,31373,72,0,-70,3.44
+2022-10-12 00:49:26,-842,8814,11795,15,0,-71,3.44
+2022-10-12 02:50:26, 0,8813,11774,15,0,-68,3.44
+2022-10-12 03:41:14,870,9676,31638,21,0,-71,3.44
+2022-10-12 03:51:40,-845,8814,11801,15,0,-72,3.44
+2022-10-12 05:52:42, 0,8841,12422,15,0,-71,3.44
+2022-10-12 07:53:42, 0,8797,11421,15,0,-73,3.44
+2022-10-12 09:54:45, 0,8805,11598,15,0,-76,3.44
+2022-10-12 11:55:54, 0,8911,14045,15,0,-75,3.45
+2022-10-12 13:16:50,36,9097,18317,72,0,-76,3.46
+2022-10-12 15:18:01, 0,9215,21021,15,0,-75,3.46
+2022-10-12 17:19:06, 0,9087,18088,15,0,-75,3.46
+2022-10-12 18:56:12,840,9717,32585,15,0,-76,3.46
+2022-10-12 19:08:09,-829,8863,12926,15,0,-75,3.46
+2022-10-12 19:42:30,809,9630,30568,15,0,-77,3.46
+2022-10-12 19:47:02,-817,8807,11639,55,0,-76,3.46
+2022-10-12 21:18:08,833,9614,30212,21,0,-74,3.46
+2022-10-12 21:27:14,-834,8766,10704,98,0,-74,3.45
+2022-10-12 21:58:30,829,9590,29659,38,0,-73,3.45
+2022-10-12 22:04:26,-839,8758,10515,15,0,-73,3.46
+2022-10-12 23:23:44,849,9606,30026,70,0,-72,3.45
+2022-10-12 23:31:08,-845,8756,10463,29,0,-73,3.45
+```
+
+Die Protokolldatei enthält diese Informationen
+
+Spalte | Beschreibung | Beispiel
+------ | ------------ | --------
+1 | Datum und Uhrzeit des Eintrags | 2022-10-12 00:34:35
+2 | Gewichtsänderung in Gramm | 866
+3 | Absolutes Gewicht auf der Waage in Gramm | 9665
+4 | Rohmessung der Waage | 31373
+5 | Anzahl erforderlicher Messungen bis Wiegung stabil | 72
+6 | Status (0=ok, 1=nicht ok) | 0
+7 | WLAN Signal | -70
+8 | Spannung in Volt | 3.44
