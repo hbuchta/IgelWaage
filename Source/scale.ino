@@ -57,6 +57,7 @@ struct hx711result getweight(HX711 scale, int count, long minmax_threshold, int 
       // Ergebnis der Messung liegt vor
       break;      
     }
+    delay(50);
   }
   // größten/kleinsten Wert entfernen und Durchschnitt der übrigen Werte nehmen  
   float weightavg;

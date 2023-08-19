@@ -479,6 +479,9 @@ Anschließend drückt man auf Weiter. Dieser Vorgang wird noch mal mit einem wei
 Im letzten Schritt zeigt die Waage das Ergebnis der Kalibrierung an.
 Wenn keine Unstimmigkeiten erkannt werden, kann das Ergebnis übernommen werden. Andernfalls muss die Kalibrierung wiederholt werden.
 
+Nach der Kalibrierung kann die Waage getestet werden. Dazu wird im Hauptmenü der Menüpunkt "Test" verwendet.
+Dabei werden unabhängig von den Optionen im folgenden Abschnitt max. 350 Messungen durchgeführt. Sofern bei 15 aufeinanderfolgenden Messungen die Abweichung kleiner als 350 Gramm war, wird das Ergebnis ausgegeben. Bei mehreren Wiederholungen wird auch die Differenz zur letzten Messung ausgegeben.
+
 ## Optionen
 
 Die letzten Einstellungen beziehen sich auf die Optionen. Jede einzelne Option ist in der Spalte Beschreibung erläutert. Die Voreinstellungen können ein erster Anhalt sein.

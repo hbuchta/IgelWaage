@@ -146,7 +146,9 @@ void start_config_server(){
 
     WiFi.setAutoReconnect(true);
     WiFi.persistent(true);
-
+  
+    // https://tttapa.github.io/ESP8266/Chap10%20-%20Simple%20Web%20Server.html
+    // https://ullisroboterseite.de/esp8266-webserver-klasse.html, HTTP_GET
     server.on("/", handleRoot);                 // Call the 'handleRoot' function when a client requests URI "/"          
     server.on("/wificonfig",handleWiFiConfig);  
     server.on("/calibration",handleCalibration);  
@@ -155,7 +157,7 @@ void start_config_server(){
     server.on("/options", handleOptions);
     server.on("/saveconfig", handleSaveConfig);
     server.on("/connectiontest", handleConnectionTest);
-	server.on("/resetconfig", handleResetConfig);
+	  server.on("/resetconfig", handleResetConfig);
     
     server.onNotFound(handleNotFound);          // When a client requests an unknown URI (i.e. something other than "/"), call function "handleNotFound"
   
@@ -266,7 +268,8 @@ void handleWiFiConfig() {
       ssid.toCharArray(configdata.wifi_ssid, sizeof(configdata.wifi_ssid));
       ntp.toCharArray(configdata.ntp_server, sizeof(configdata.ntp_server));
   
-      if (!pwd.equals(password_notmodified)) pwd.toCharArray(configdata.wifi_pwd, sizeof(configdata.wifi_pwd));          
+      if (!pwd.equals(password_notmodified)) pwd.toCharArray(configdata.wifi_pwd, sizeof(configdata.wifi_pwd));    
+      //server.arg("pwd").toCharArray(configdata.wifi_pwd, sizeof(configdata.wifi_pwd));
       
       webconfig.wifi_ok=true;  
       webconfig.modified=true;    
@@ -284,7 +287,8 @@ void handleWiFiConfig() {
   if (error.length()>0) {
     html+="<font color=\"#FF0000\">"+error+"</font><br>";
   }
-  html += "<table>\n";  
+  html += "<table>\n";
+  // https://developer.mozilla.org/de/docs/Web/HTML/Element/Input
   html += "<tr><td>WLAN SSID</td><td><input name=\"ssid\" type=\"text\" maxlength=80 ";
   html += "value=\"" + html_encode(String(configdata.wifi_ssid)) + "\"";
   html += "</td></tr>\n";
@@ -296,7 +300,8 @@ void handleWiFiConfig() {
   html += "</td></tr>\n";
 
   
-  html += "</table>\n";  
+  html += "</table>\n";
+  // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button
   
   html+="<hr>";
   html += "<br><input type=\"button\" value=\"Abbruch\" onClick=\"window.location.href='/'\"/>";
@@ -674,7 +679,7 @@ void handleOptions() {
   html+="<td>Anzahl Wiegungen, die zu einem Ergebnis gemittelt werden.</td><tr>";
 
   html+="<tr><td>Max. Differenz</td><td><input name=\"minmaxthreshold\" type=\"number\" maxlength=\"6\" size=\"6\" value=\""+html_encode(String(configdata.minmaxthreshold)) +"\"> Gramm</td>";
-  html+="<td>Wenn währende der Wiegungen die Differenz Max-Min gr&ouml;&szlig;er als dieser Wert ist, beginnt die Messung erneut.</td><tr>";
+  html+="<td>Wenn w&auml;hrende der Wiegungen die Differenz Max-Min gr&ouml;&szlig;er als dieser Wert ist, beginnt die Messung erneut.</td><tr>";
 
   html+="<tr><td>Max. Anzahl Wiegungen</td><td><input name=\"weightavgmaxtry\" type=\"number\" maxlength=\"6\" size=\"6\" value=\""+html_encode(String(configdata.weightavgmaxtry)) +"\"> Wiegungen</td>";
   html+="<td>Maximale Anzahl an Wiegungen, die versucht werden, bevor ein instabiles Ergebnis ermittelt wird.</td><tr>";
