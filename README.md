@@ -1,5 +1,10 @@
 # WiFi Waage für Igelfutterhaus
 
+Das Projekt in diesem Repository umfasst den Bau einer Waage, die im Dauerbetrieb Gewichte misst und via WLAN an einen Server (bei mir: Fritz!Box) überträgt. Hauptziele beim Design waren: Batteriebetrieb (geringer Stromverbrauch) und Betrieb im Außenbereich (Wasser, Staub) mit ausreichender Sendeleistung. Die Waage misst die Gewichtsdifferenz zur letzten Messung in einem einstellbaren Intervall (z.B. alle 30 Sekunden). Da die Waage keine Nullstellung hat, kann das absolute Gewicht auf der Waage nicht gemessen werden. Ich habe die Waage unter einem Igelfutterhaus angebracht. Wenn ein Igel das Haus betritt oder verlässt, ermittelt die Waage so das Gewicht des Tieres. 
+
+Die Einstellungen lassen sich über eine Weboberfläche durchführen. Das Projekt enthält den Programmcode für einen ESP 8266, sowie den Schaltplan und eine Aufstellung der verwendeten Komponenten (Gesamtkosten ~25-30€).
+
+
 Inspiration: https://beelogger.de/sensoren/waegzellen_hx711/
 
 
@@ -194,7 +199,11 @@ Bei Aisler.net sieht die Platine so aus (Oberseite):
 
 ![](./media/image12.png)
 
-Hinweis: Das schöne Bild mit dem Igel ist urheberrechtlich geschützt. Es kann [hier bei Etsy](https://www.etsy.com/de/listing/661210954/igel-einzigartige-tier-datei-svg-ai-dxf) gekauft werden. In der Platine, die hier im Ordner abgelegt ist, ist das Bild nicht enthalten.
+Hinweis: Das schöne Bild mit dem Igel ist urheberrechtlich geschützt. Es konnte [hier bei Etsy](https://www.etsy.com/de/listing/661210954/igel-einzigartige-tier-datei-svg-ai-dxf) gekauft werden. Inzwischen wird das Bild nicht mehr angeboten.
+
+In der Platine, die hier im Ordner abgelegt ist, ist das Bild nicht enthalten.
+
+
 
 Die fertig bestückte Platine:
 
