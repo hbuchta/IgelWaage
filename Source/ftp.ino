@@ -2,20 +2,24 @@
 // FTP-Verbindung zum Wegschreiben der Ergebnisse
 
 String get_response(WiFiClient client) {
-  String result="";
+  String result;
+  result.reserve(2048);
+  char buf[256]; 
+  
   unsigned long timeout = millis();
-  while (client.available() == 0) {
+  while (!client.available()) {
     if (millis() - timeout > 5000) {
       debugln(">>> Client Timeout !");
       client.stop();
       return(result);
     }
-  }    
-  // Read all the lines of the reply from server and print them to Serial  
+  }
+ 
   while (client.available()) {
-    char ch = static_cast<char>(client.read());
-    result += ch;   // TODO ganz schrecklich! 
-  }  
+    size_t len = client.readBytes(buf, sizeof(buf));
+    result.concat(String(buf).substring(0, len));
+  }
+  
   return(result);
 }
 
