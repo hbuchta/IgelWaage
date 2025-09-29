@@ -66,9 +66,7 @@ ESP8266 **ESP-07S**):
 [ZHITING ESP8266 Seriell zu WiFi-Funkmodul
 ESP-07S](https://www.amazon.de/gp/product/B085B21DMB/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 
-![Ein Bild, das Text, Elektronik, Schaltkreis enthält. Automatisch
-generierte
-Beschreibung](./media/image1.png)
+<img src="./media/image1.png" width="200"/>
 
 Um den Controller nutzen zu können, sollte dieser auf eine Platine
 aufgelötet werden (SMD-Löten). Hier eignet sich diese Platine:
@@ -77,7 +75,8 @@ aufgelötet werden (SMD-Löten). Hier eignet sich diese Platine:
 ESP-07 und
 ESP-08](https://www.amazon.de/gp/product/B071YQPLWH/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&th=1)
 
-![](./media/image2.png)
+<img src="./media/image2.png" width="250"/>
+
 
 Als Antenne habe ich diese genutzt:
 
@@ -86,8 +85,7 @@ auf RP-SMA-Buchse Kabel Kompatibel mit Intel Fenvi HP Dell Wireless
 Mini-PCI Express PCIE-Netzwerkkarte WiFi-Adapter, 2
 Stück](https://www.amazon.de/gp/product/B095KVPS34/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1)
 
-![Ein Bild, das Text enthält. Automatisch generierte
-Beschreibung](./media/image3.png)
+<img src="./media/image3.png" width="200"/>
 
 ### USB zu TTL Adapter
 
@@ -97,8 +95,7 @@ erforderlich, z.B.
 [AZDelivery 3 x CP2102 USB zu TTL Konverter HW-598 für 3,3V und
 5V](https://www.amazon.de/gp/product/B07N2YLH26/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
 
-![Ein Bild, das Text enthält. Automatisch generierte
-Beschreibung](./media/image4.png)
+<img src="./media/image4.png" width="350"/>
 
 Wichtig ist hier auf den Chipsatz zu achten, in diesem Fall ein CP2102.
 Je nach Chipsatz sind unterschiedliche Treiber erforderlich (siehe
@@ -112,9 +109,7 @@ Der AD-Wandler HX711 kann z.B. hier bestellt werden.
 Präzision AD Modul Dual-Kanal für Arduino
 Waage](https://www.amazon.de/gp/product/B07TWLP3X8/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1)
 
-![Ein Bild, das Text, Elektronik, Schaltkreis enthält. Automatisch
-generierte
-Beschreibung](./media/image5.png)
+<img src="./media/image5.png" width="250"/>
 
 ### Ladezellen
 
@@ -128,7 +123,8 @@ Hier ist auch direkt ein HX711 Modul enthalten, allerdings war mir hier
 die Platine zu groß. Die Platine aus Abschnitt 1.1.3 ist deutlich
 kleiner.
 
-![](./media/image6.png)
+<img src="./media/image6.png" width="350" />
+
 
 ### Batterie und Batteriehalter
 
@@ -140,15 +136,14 @@ wiederaufladbare Lithium Eisenphosphat Batterien 3C-5C Entladung für
 Taschenlampen,
 Elektroroller](https://www.amazon.de/gp/product/B09J4N36WT/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1)
 
-![](./media/image7.png)
+<img src="./media/image7.png" width="350" />
 
 Ein entsprechendes Batteriefach wird auch benötigt, z.B.
 
 [2 Stück 18650 Einzelbatteriehalter, 1 Steckplatz, schwarzer
 Verriegelungsfederbatteriehalter](https://www.amazon.de/gp/product/B08K32JPZW/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)
 
-![Ein Bild, das Waffe enthält. Automatisch generierte
-Beschreibung](./media/image8.png)
+<img src="./media/image8.png" width="350" />
 
 Alternativ kann ein Halter für 2 Batterien genutzt werden. Die Batterien
 müssen dann parallel (nicht in Reihe!!!) geschaltet werden, z.B.:
@@ -157,7 +152,7 @@ müssen dann parallel (nicht in Reihe!!!) geschaltet werden, z.B.:
 Batteriehalter für 2 x 18650 Batterie 2
 Stück](https://www.amazon.de/gp/product/B095KVPS34/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1)
 
-![](./media/image9.png)
+<img src="./media/image9.png" width="350" />
 
 Hier müssen beide Batterien in der gleichen Orientierung eingelegt und
 die Anschlüsse jeweils auf Kopf- und Fußseite verbunden werden. Achtung:
@@ -177,8 +172,7 @@ Anschlußdose Wasserdicht Schaltschränke Stromverteilung Zählerkasten
 Leergehäuse Kunststoff
 (100x68x50mm)](https://www.amazon.de/gp/product/B07LF6TMLD/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&th=1)
 
-![Ein Bild, das Wand, drinnen, Gefäß enthält. Automatisch generierte
-Beschreibung](./media/image10.png)
+<img src="./media/image10.png" width="350" />
 
 ### Sonstiges
 
@@ -189,29 +183,36 @@ LED-Schalter SPST 3 Pins Wippschalter,12V 20A Taste Rocker Kippschalter
 Für Auto, Boot, Haushaltsgeräte KCD1-8-101NW
 (grün)](https://www.amazon.de/gp/product/B08LKSYSRP/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&th=1)
 
+
+### Experimenteller Aufbau
+
+Zum Ausprobieren kann die Schaltung einfach auf dem Steckbrett aufgebaut werden.
+In dem Bild liegt der USB zu TTL Adapter einfach auf der Platine. Um den ESP zu programmieren ist dieser im Board oben links einzustecken (dort wo die 4 Kabel nebeneinander eingesteckt sind). Alle Verbindungen finden sich in der Fritzing-Datei in den Quellen hier. 
+
+<img src="./media/breadboard.JPG" width="350">
+
+
 ### Platine
 
 Die Platine kann mit einem PCB Tool wie Fritzing erstellt werden:
 
-![](./media/image11.png)
+<img src="./media/image11.png" width="350" />
 
 Bei Aisler.net sieht die Platine so aus (Oberseite):
 
-![](./media/image12.png)
+<img src="./media/image12.png" width="350" />
 
 Hinweis: Das schöne Bild mit dem Igel ist urheberrechtlich geschützt. Es konnte [hier bei Etsy](https://www.etsy.com/de/listing/661210954/igel-einzigartige-tier-datei-svg-ai-dxf) gekauft werden. Inzwischen wird das Bild nicht mehr angeboten.
-
 In der Platine, die hier im Ordner abgelegt ist, ist das Bild nicht enthalten.
-
-
 
 Die fertig bestückte Platine:
 
-![](./media/image13.png)
+<img src="./media/image13.png" width="350" />
 
 Und so sieht das dann in der Elektronikbox aus.
 
-![](./media/image14.png)
+<img src="./media/image14.png" width="350" />
+
 
 ## Seriellen Treiber installieren
 
@@ -226,21 +227,19 @@ Der Treiber kann hier heruntergeladen werden:\
 
 Treiber ist CP210x Windows Driver, nicht CP210x Universal Windows Driver
 
-![Ein Bild, das Text enthält. Automatisch generierte
-Beschreibung](./media/image15.png)
+<img src="./media/image15.png" />
 
 Nach dem Download die ZIP-Datei entpacken und die INF-Datei installieren
 (Kontextmenü):
 
-![Ein Bild, das Text enthält. Automatisch generierte
-Beschreibung](./media/image16.png)
+<img src="./media/image16.png" />
 
 Den genutzten Port (virtueller COM-Anschluss) sieht man im
 Gerätemanager. Hier z.B. COM4. Dieser Port muss dann in der Arduino IDE
 ausgewählt werden.
 
-![Ein Bild, das Text enthält. Automatisch generierte
-Beschreibung](./media/image17.png)
+<img src="./media/image17.png" />
+
 
 ### D1 Wemos NodeMCU (aufgedruckte WLAN Antenne)
 
@@ -248,7 +247,7 @@ Der Treiber kann hier heruntergeladen werden:
 
 <https://tttapa.github.io/ESP8266/Chap03%20-%20Software.html>
 
-![](./media/image18.png)
+<img src="./media/image18.png" />
 
 Der Download-Link für die NodeMCU Boards verweist auf:
 
@@ -259,11 +258,10 @@ Hier die Windows-Version herunterladen, entpacken und starten.
 **Der Microcontroller dafür bereits vor der Installation per USB
 angeschließen!**
 
-![Ein Bild, das Text enthält. Automatisch generierte
-Beschreibung](./media/image19.png)
+<img src="./media/image19.png" />
 
-![Ein Bild, das Text enthält. Automatisch generierte
-Beschreibung](./media/image20.png)
+<img src="./media/image20.png" />
+
 
 **Wenn das Board bei der Installation nicht über das serielle Kabel
 angeschlossen war (oder das Kabel defekt ist bzw. kein Datenkabel war)
@@ -274,7 +272,7 @@ kommt die Meldung, dass der Treiber vorläufig installiert wurde.**
 Den genutzten Port (virtuelle COM-Schnittstellen), sieht man im
 Gerätemanager. Hier ist es COM3.
 
-![](./media/image21.png)
+<img src="./media/image21.png" />
 
 Dieser Port muss in der Arduino IDE eingestellt werden.
 
@@ -301,12 +299,12 @@ Boardverwalter-URLs" eintragen und dann auf ok klicken.
 
 https://arduino.esp8266.com/stable/package_esp8266com_index.json
 
-![](./media/image22.png)
+<img src="./media/image22.png" />
 
 Dann unter Werkzeuge/Boardverwalter über das Suchfeld "esp8266" die
 "eps8266" Boards hinzufügen:
 
-![](./media/image23.png)
+<img src="./media/image23.png" />
 
 Anschließend das Board auswählen unter Werkzeuge/Board: "Name"/ESP8266
 Boards.
@@ -314,17 +312,16 @@ Boards.
 Ja nach verwendetem Board kommen unterschiedliche Einstellungen zur
 Anwendung.
 
-  -------------------------------------------------------------------------------------------------------------------------
-  ESP-07S                                                           NodeMCU
-  ----------------------------------------------------------------- -------------------------------------------------------
-  ![Ein Bild, das Text enthält. Automatisch generierte              ![](./media/image25.png)
-  Beschreibung](./media/image24.png)  
+<table>
+<theader><tr><td>ESP-07S</td><td>NodeMCU</td></tr></theader>
+<tbody><tr valign="top"><td><img src="./media/image24.png" /></td>
+<td><img src="./media/image25.png" /></td></tr>
+</table>
 
-  -------------------------------------------------------------------------------------------------------------------------
 
 Diese Einstellungen erreicht man über das Werkzeuge-Menü:
 
-![](./media/image26.png)
+<img src="./media/image26.png" /> 
 
 Im Menü "Werkzeuge" können weitere Einstellungen für das Board
 vorgenommen werden. Wichtig ist die Port-Einstellung (gemäß dem Port,
@@ -340,19 +337,19 @@ haben).
 Mit installiertem Treiber kann auch der Port gewählt in der Arduino IDE
 gewählt werden:
 
-![](./media/image27.png)
+<img src="./media/image27.png" /> 
 
 Der Port muss durch Auswahl einmal gewählt werden. Solange dort „Port"
 steht, ist noch kein Port gesetzt. Danach sollte das so aussehen:
 
-![Ein Bild, das Text enthält. Automatisch generierte
-Beschreibung](./media/image28.png)
+<img src="./media/image28.png" /> 
 
 Der serielle Monitor findet sich unter Werkzeuge/Serieller Monitor. Hier
 muss die richtige Baud-Zahl eingetragen (identisch mit dem
 Serial.begin-Wert im Code), bei mir 115200.
 
-![](./media/image29.png)
+<img src="./media/image29.png" /> 
+
 
 ## Bibliothek HX711 installieren
 
@@ -363,7 +360,8 @@ Die HX711 Bibliothek, die ich genutzt haben, findet sich hier:
 Sie kann einfach über die Bibliotheksverwaltung der IDE installiert
 werden.
 
-![](./media/image30.png)
+<img src="./media/image30.png" /> 
+
 
 # Hardware zusammensetzen
 
@@ -371,7 +369,9 @@ werden.
 
 Die vier Pads müssen nach diesem Muster verschaltet werden:
 
-![](./media/image31.png)
+<img src="./media/image31.png" /> 
+
+Hierbei ist Sorgfalt erforderlich. Wenn diese Beschaltung nicht genau eingehalten wird, kann das System sehr wahrscheinlich keine Messungen durchführen.
 
 # Fritz!Box als Zeit- FTP Server
 
@@ -382,14 +382,14 @@ Netzwerkeinstellungen und ganz nach unten scrollen. Den Bereich „weitere
 Einstellungen" aufklappen. Dort kann das Häkchen gesetzt werden bei
 „FRITZ!Box als Zeitserver im Heimnetz bereitstellen".
 
-![](./media/image32.png)
+<img src="./media/image32.png" /> 
 
 ## FTP
 
 Zuerst ein Verzeichnis anlegen. Am einfachsten geht das mit dem
 FRITZ!NAS Client:
 
-![](./media/image33.png)
+<img src="./media/image33.png" /> 
 
 Ich habe ein Verzeichnis wifiwaage auf dem USB Stick angelegt. Darunter
 am besten direkt ein Verzeichnis log, in das die Wiegeprotokolle
@@ -410,30 +410,28 @@ Passwort: bella123
 
 Bei Berechtigungen das Häkchen bei „Zugang zu NAS-Inhalten" setzen.
 
-![](./media/image34.png)
+<img src="./media/image34.png" /> 
 
 In dem dann aufklappenden Bereich auf „Verzeichnis hinzufügen" klicken
 und das gerade angelegte Verzeichnis auswählen (nicht das
 Log-Unterverzeichnis):
 
-![Ein Bild, das Text enthält. Automatisch generierte
-Beschreibung](./media/image35.png)
+<img src="./media/image35.png" /> 
 
 Mit einem Client wie WinSCP (auch FileZilla, FireFTP oder viele andere)
 kann man den Zugang jetzt püfen und später auch Dateien herunterladen.
 Wichtig ist, die Verbindung als FTP (nicht SFTP) zu konfigurieren:
 
-![](./media/image36.png)
+<img src="./media/image36.png" /> 
 
 Ein Standardverzeichnis muss nicht gewählt werden (man befindet sich
 automatisch in dem freigegeben Ordner). Das Passwort kann hier mit
 gespeichert werden.
 
-![Ein Bild, das Text enthält. Automatisch generierte
-Beschreibung](./media/image37.png)
+<img src="./media/image37.png" /> 
 
-![Ein Bild, das Text enthält. Automatisch generierte
-Beschreibung](./media/image38.png)
+<img src="./media/image38.png" /> 
+
 
 # Konfiguration der Waage
 
