@@ -777,7 +777,8 @@ void handleConnectionTest() {
       if (l>max_loop) break;
       delay(500);      
       server.sendContent("*");      
-      now = time(nullptr);      
+      now = time(nullptr);
+      l++;
     }   
     if (l>max_loop) {
       ok=false;

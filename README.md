@@ -1,5 +1,7 @@
 # WiFi Waage für Igelfutterhaus
 
+<img src="./media/Igelwaage.JPG" width="350" /> <img src="./media/Futterhaus.JPG" width="350" />
+
 Das Projekt in diesem Repository umfasst den Bau einer Waage, die im Dauerbetrieb Gewichte misst und via WLAN an einen Server (bei mir: Fritz!Box) überträgt. Hauptziele beim Design waren: Batteriebetrieb (geringer Stromverbrauch) und Betrieb im Außenbereich (Wasser, Staub) mit ausreichender Sendeleistung. Die Waage misst die Gewichtsdifferenz zur letzten Messung in einem einstellbaren Intervall (z.B. alle 30 Sekunden). Da die Waage keine Nullstellung hat, kann das absolute Gewicht auf der Waage nicht gemessen werden. Ich habe die Waage unter einem Igelfutterhaus angebracht. Wenn ein Igel das Haus betritt oder verlässt, ermittelt die Waage so das Gewicht des Tieres. 
 
 Die Einstellungen lassen sich über eine Weboberfläche durchführen. Das Projekt enthält den Programmcode für einen ESP 8266, sowie den Schaltplan und eine Aufstellung der verwendeten Komponenten (Gesamtkosten ~25-30€).

@@ -91,7 +91,7 @@ bool log_data(String data) {
   int i2=s.indexOf(")",i1);
   s = s.substring(i1+1,i2)+",";   // z.B. 192,168,173,1,166,134
 
-  int ip[5], r=0, t=0;
+  int ip[6], r=0, t=0;
   for (int i=0; i < s.length(); i++)
   { 
    if(s.charAt(i) == ',') 
